@@ -90,7 +90,7 @@ function ConcatenateButton(){
  }
 
  function Divisibility(){
-     var x = document.getElementById('NumberToDivide').value;
+     let x = parseInt (document.getElementById('NumberToDivide').value);
      var y = 0;
      for (;x>1;){
 
@@ -118,3 +118,37 @@ function ConcatenateButton(){
      document.getElementById('NumberOfIncrementations').innerHTML = "Number of Incrementations:" + y;
  }
 
+
+ function CheckForTripple(){
+
+
+    x = document.getElementById('TrippleCheck').value
+    y = 0;
+      for (let i = 3; i<x.length; i++){
+          if (x.charAt(i)===x.charAt(i-1)&&x.charAt(i-1)===x.charAt(i-2)){
+              y++;
+          }
+      }
+     document.getElementById('NumberOfTripples').innerHTML = y;
+ }
+
+
+ function CreateParagraphs(){ 
+     let p2 = document.createElement('p')
+     p2.innerHTML = "Paragraph 2"
+     p2.setAttribute("id", "p2")
+     document.getElementById('ParagraphManipulation').appendChild(p2)
+     
+ }
+
+ function CreateParagraphsFromText(){
+    let p3 = document.createElement('p')
+    p3.innerHTML = `<p>${document.getElementById('ParagraphCheck').value}</p>`;
+    p3.setAttribute("id", "p3")
+    document.getElementById('ParagraphManipulation').appendChild(p3)
+ }
+
+
+ function RemoveParagraphs(){
+    document.getElementById('ParagraphManipulation').removeChild(document.getElementById('p2'))
+}
