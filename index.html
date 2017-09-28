@@ -3,6 +3,7 @@
 
 
 <head>
+    <meta charset="UTF-8">
     <Script src ="exerciseJavaScripting.js" type = "text/javascript" ></Script>
     <title> QA </title>
 </head>
@@ -27,8 +28,7 @@
     <p id = "concatenate"></p>
 
     <p> <input type="button" value="Add" onclick="AddButton()"> <input type="button" value="Remove" onclick="RemoveButton()">
-        <input type="text" id="txta1">
-
+        <input type="text" id="txta1" placeholder="Word to Insert in The Array">
         <p id = "DisplayArray"></p>
 
         
@@ -36,27 +36,27 @@
 <!-- Level 2 INTERMEDIATE EXERCISES -->
     <div id = "FizzBuzzing"></div>
      <p> <input type="button" value="DisplayArray" onclick="FizzBuzz()">
-        <input type="number" id ="LoopLenght"> <input type="text" id ="DivisibleBy3"> <input type="text" id ="DivisibleBy5"> </p>
+        <input type="number" id ="LoopLenght" placeholder="Array Lenght"> <input type="text" id ="DivisibleBy3" placeholder="Word if Number is Div by 3"> <input type="text" id ="DivisibleBy5" placeholder="Word if Number is Div by 5"> </p>
         <p id = "NumberLoop"></p>
     </div>
 
     <div id = "DividingBy3">
     <p> <input type="button" value="Divide" onclick="Divisibility()">
-        <input type="number" id ="NumberToDivide"> </p>
+        <input type="number" id ="NumberToDivide" placeholder="Number To Divide by 3"> </p>
     <p id = "DivisibilityResult"></p>
     <p id = "NumberOfIncrementations"></p>
     </div>
     
     <div id = "TrippleChecking">
     <p> <input type="button" value="Check" onclick="CheckForTripple()">
-        <input type="text" id ="TrippleCheck"> </p>
+        <input type="text" id ="TrippleCheck" placeholder="Search"> </p>
     <p id = "NumberOfTripples"></p>
     </div>
 
     <div id = "ParagraphManipulation">
-    <p> <input type="button" value="ClickToCreate" onclick="CreateParagraphs()"> <input type="button" value="ClickToCreateFromText" onclick="CreateParagraphsFromText()">
-        <input type="text" id ="ParagraphCheck"> 
-        <input type="button" value="ClickToRemove" onclick="RemoveParagraphs()"> </p>
+    <p> <input type="button" value="ClickToCreate" onclick="CreateParagraphs()"> <input type="button" value="ClickToRemove" onclick="RemoveParagraphs()"> <input type="button" value="ClickToCreateFromText" onclick="CreateParagraphsFromText()">
+        <input type="text" id ="ParagraphCheck" placeholder="Paragraph"> 
+         </p>
     <p id = "p1">"This is Praragraph 1"</p>
     </div>
 
@@ -71,9 +71,32 @@
     </div>
 
     <div id = "JSONRequesting2">
-        <p> <input type="text" id ="SearchJSON2">
+        <p> <input type="text" id ="SearchJSON2" placeholder="Search">
             <input type="button" value="ClickToJSON2" onclick="JSON2()"> </p>
             <p id = "Sjson"></p>
+    </div>
+    <p><br></p>
+    
+    <div id = "Garage">
+    <p>Grage Exercise</p>
+    <input type="text" id ="CarOwnerName" placeholder="Car Owner Name"> <input type="text" id ="CarOwnerSurname" placeholder="Car Owner Surname"> <input type="button" value="Register Car" onclick="AddToGarrageButton()">
+    <p> <input type="text" id ="CarMake" placeholder="Car Make"> <input type="text" id ="CarEngine" placeholder="Engine Serial Number"> <input type="number" id ="CarWheels" placeholder="Number Of Wheels On Car"> </p>
+    <p> <input type="button" value="Remove" onclick="RemoveFromGarageButton()"> <input type="text" id ="NameToRemove" placeholder="Car Owner Name"> <input type="text" id ="SurnameToRemove" placeholder="Car Owner Surname"> </p>
+    <p> <select id = "CarFaultList">
+        <option>No Faults, MOT</option>  
+        <option>Faulty Tires</option> 
+        <option>Faulty Engine</option> 
+        <option>Faulty Lights</option>
+        <option>Faulty Dashboard</option> 
+        <option>Faulty Electrics</option>
+        <option>Unknown Faulty</option> 
+        <option>Multiple Faults</option> </select>  </p>
+        <input type="checkbox" name="vehicle" value="Bike" visible = "false"> I have a bike<br>
+    <p id = "CarList">Car List: </p>
+    </div>
+
+    <div id = "CheckList">
+            
     </div>
 
 
