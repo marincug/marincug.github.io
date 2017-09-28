@@ -265,7 +265,6 @@ function AddToGarrageButton() {
     if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Faulty Engine") repairCost = 5;
     if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Unknown Faulty") repairCost = "To be determined on arrival";
     if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Multiple Faults"){
-     
     }
 
     totalCost.textContent = "Total cost: " + repairCost + "£";
