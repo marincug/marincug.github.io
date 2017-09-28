@@ -1,2 +1,42 @@
-body {background-color: #07B9B9;}
-.anything {color: white; font-family: arial;}
+body {
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+header{
+    background: #999;
+    color:white; 
+    padding: 15px 15px 0 15px
+}
+
+
+header h1{
+    margin: 0;
+    display: inline;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0 0 0 15px;
+    display: inline;
+}
+
+nav ul li{
+    background: #000000;
+    color: #ffffff;
+    display: inline-block;
+    list-style-type: none;
+    padding: 5px 15px
+
+}
+
+nav ul li a {
+    color: #ffffff;
+}
+
+.row{
+
+}
+.col{
+    float: left;
+}
