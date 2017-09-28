@@ -168,20 +168,20 @@ function JSON() {
         let myP5 = document.createElement(`p`);
         let myP6 = document.createElement(`p`);
 
-        myP1.textContent = "\n" + requestData[`squadName`];
-        myP2.textContent = "\n" + requestData[`homeTown`];
-        myP3.textContent = "\n" + requestData[`formed`];
-        myP4.textContent = "\n" + requestData[`secretBase`];
-        myP5.textContent = "\n" + requestData[`active`];
+        myP1.textContent = "Squad Name: " + requestData[`squadName`];
+        myP2.textContent = "Home Town: " + requestData[`homeTown`];
+        myP3.textContent = "Formed in: " + requestData[`formed`];
+        myP4.textContent = "Base of Operations: " + requestData[`secretBase`];
+        myP5.textContent = "Active: " + requestData[`active`];
 
         for (let i = 0; i < requestData[`members`].length; i++) {
             let myH1 = document.createElement(`h5`);
             myH1.textContent += "Name: ";
-            myH1.textContent += "\n" + requestData[`members`][i].name;
+            myH1.textContent += "" + requestData[`members`][i].name + " ----- ";
             myH1.textContent += "   Age: ";
-            myH1.textContent += "\n" + requestData[`members`][i].age;
+            myH1.textContent += "\n" + requestData[`members`][i].age + " ----- ";
             myH1.textContent += "  Real Identity: ";
-            myH1.textContent += "\n" + requestData[`members`][i].secretIdentity;
+            myH1.textContent += "\n" + requestData[`members`][i].secretIdentity + " ----- ";
             myH1.textContent += "  Powers: ";
             // myH1.textContent += "\n" + requestData[`members`][i].powers;
             myH1.textContent += " ";
