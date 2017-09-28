@@ -134,7 +134,7 @@ function CheckForTripple() {
 
 function CreateParagraphs() {
     let p2 = document.createElement('p')
-    p2.innerHTML = "Paragraph 2"
+    p2.innerHTML = "This is Paragraph 2"
     p2.setAttribute("id", "p2")
     document.getElementById('ParagraphManipulation').appendChild(p2)
 
@@ -175,22 +175,21 @@ function JSON() {
         myP5.textContent = "Active: " + requestData[`active`];
 
         for (let i = 0; i < requestData[`members`].length; i++) {
-            let myH1 = document.createElement(`h5`);
+            let myH1 = document.createElement(`p`);
             myH1.textContent += "Name: ";
             myH1.textContent += "" + requestData[`members`][i].name + " ----- ";
             myH1.textContent += "   Age: ";
             myH1.textContent += "\n" + requestData[`members`][i].age + " ----- ";
             myH1.textContent += "  Real Identity: ";
-            myH1.textContent += "\n" + requestData[`members`][i].secretIdentity + " ----- ";
-            myH1.textContent += "  Powers: ";
-            // myH1.textContent += "\n" + requestData[`members`][i].powers;
-            myH1.textContent += " ";
+            myH1.textContent += "\n" + requestData[`members`][i].secretIdentity + " ----- "
+            ;
+            myH1.textContent += "  Powers:  ";
             for (let j = 0; j < requestData["members"][i]["powers"].length; j++) {
                 myH1.textContent += "\n" + requestData[`members`][i][`powers`][j] + ", ";
 
             }
 
-            document.getElementsByTagName(`body`)[0].appendChild(myH1);
+            document.getElementById('json6').appendChild(myH1);
         }
         document.getElementById('json1').appendChild(myP1)
         document.getElementById('json2').appendChild(myP2)
@@ -201,3 +200,47 @@ function JSON() {
 
     }
 }
+    function JSON2() {
+        let requestURL2 = `https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json`;
+        let request2 = new XMLHttpRequest();
+        request2.open(`GET`, requestURL2);
+        request2.responseType = `json`
+        request2.send();
+        request2.onload = function () {
+            let requestData2 = request2.response
+
+            let x = document.getElementById('SearchJSON2').value;
+
+            for (let i = 0; i<requestData2.length; i++){
+                let myH1 = document.createElement(`p`);
+                if (requestData2[i].nm.includes(x)){
+                    myH1.textContent += requestData2[i].nm + ", from: ";
+                    myH1.textContent += requestData2[i].cty + ", of: ";
+                    myH1.textContent += requestData2[i].hse + ", lived between the years of: ";
+                    myH1.textContent += requestData2[i].yrs;
+                }
+                if (requestData2[i].cty.includes(x)){
+                    myH1.textContent += requestData2[i].nm + ", from: ";
+                    myH1.textContent += requestData2[i].cty + ", of: ";
+                    myH1.textContent += requestData2[i].hse + ", lived between the years of: ";
+                    myH1.textContent += requestData2[i].yrs;
+                }
+                if (requestData2[i].hse.includes(x)){
+                    myH1.textContent += requestData2[i].nm + ", from: ";
+                    myH1.textContent += requestData2[i].cty + ", of: ";
+                    myH1.textContent += requestData2[i].hse + ", lived between the years of: ";
+                    myH1.textContent += requestData2[i].yrs;
+                }
+                if (requestData2[i].yrs.includes(x)){
+                    myH1.textContent += requestData2[i].nm + ", from: ";
+                    myH1.textContent += requestData2[i].cty + ", of: ";
+                    myH1.textContent += requestData2[i].hse + ", lived between the years of: ";
+                    myH1.textContent += requestData2[i].yrs;
+                }
+                document.getElementById('Sjson').appendChild(myH1)
+            }
+
+        }
+
+    }
+
