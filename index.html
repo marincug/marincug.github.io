@@ -3,14 +3,25 @@
 
 
 <head>
+    <link rel="stylesheet" type="text/css" href="bootStrap.css">
     <meta charset="UTF-8">
     <Script src ="exerciseJavaScripting.js" type = "text/javascript" ></Script>
     <title> QA </title>
+
+
+
+
 </head>
 <body>
     <!-- LEVEL 1 BEGGINER EXERCISES -->
-    <p> <input type="button" value="Addition" onclick="AddButton()"> 
-        <input type="number" id="txtA"> <input type="number" id="txtB"> <input type="number" id="txtC"> </p>
+    <p><br></p>
+    <div class="w3-container">
+            <div class="w3-panel w3-border">
+        <p> <input type="button" value="Addition" onclick="AddButton()"> 
+            <input type="number" id="txtA"> <input type="number" id="txtB"> <input type="number" id="txtC"> 
+        </p>
+        </div>
+    </div>
 
     <p> <input type="button" value="Square" onclick="SquarePowerButton()"> 
         <input type="text" id="txt2"> </p>
@@ -34,6 +45,7 @@
         
 
 <!-- Level 2 INTERMEDIATE EXERCISES -->
+
     <div id = "FizzBuzzing"></div>
      <p> <input type="button" value="DisplayArray" onclick="FizzBuzz()">
         <input type="number" id ="LoopLenght" placeholder="Array Lenght"> <input type="text" id ="DivisibleBy3" placeholder="Word if Number is Div by 3"> <input type="text" id ="DivisibleBy5" placeholder="Word if Number is Div by 5"> </p>
@@ -79,9 +91,19 @@
     
     <div id = "Garage">
     <p>Grage Exercise</p>
-    <input type="text" id ="CarOwnerName" placeholder="Car Owner Name"> <input type="text" id ="CarOwnerSurname" placeholder="Car Owner Surname"> <input type="button" value="Register Car" onclick="AddToGarrageButton()">
-    <p> <input type="text" id ="CarMake" placeholder="Car Make"> <input type="text" id ="CarEngine" placeholder="Engine Serial Number"> <input type="number" id ="CarWheels" placeholder="Number Of Wheels On Car"> </p>
-    <p> <input type="button" value="Remove" onclick="RemoveFromGarageButton()"> <input type="text" id ="NameToRemove" placeholder="Car Owner Name"> <input type="text" id ="SurnameToRemove" placeholder="Car Owner Surname"> </p>
+    <input type="text" id ="CarOwnerName" placeholder="Car Owner Name"> 
+    <input type="text" id ="CarOwnerSurname" placeholder="Car Owner Surname"> 
+    <input type="button" value="Register Car" onclick="AddToGarrageButton()">
+   
+    <p> <input type="text" id ="CarMake" placeholder="Car Make"> 
+        <input type="text" id ="CarEngine" placeholder="Engine Serial Number">
+         <input type="number" id ="CarWheels" placeholder="Number Of Wheels On Car"> </p>
+
+    <p> <input type="button" value="Remove" onclick="RemoveFromGarageButton()"> 
+        <input type="text" id ="NameToRemove" placeholder="Car Owner Name"> 
+        <input type="text" id ="SurnameToRemove" placeholder="Car Owner Surname"></p>
+        <input type="button" value="Total Cost" onclick="TotalCostCalculator()"> 
+
     <p> <select id = "CarFaultList">
         <option>No Faults, MOT</option>  
         <option>Faulty Tires</option> 
@@ -98,16 +120,10 @@
         <input type="checkbox" name="vehicle" value="Faulty Dashboard" hidden="true"> 
         <input type="checkbox" name="vehicle" value="Faulty Electrics" hidden="true"> 
         <input type="checkbox" name="vehicle" value="Unknown Faulty" hidden= "true"> 
-        
-
     <p id = "CarList">Car List: </p>
-    </div>
 
-    <div id = "CheckList">
-            
-    </div>
-
-
+    
+    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
 </body>
 
 </html>

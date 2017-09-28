@@ -257,14 +257,14 @@ function AddToGarrageButton() {
     displayList.setAttribute("id", "DL" + (garageArray.length - 1));
     document.getElementById('CarList').appendChild(displayList);
 
-    if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "No Faults, MOT") repairCost = 1;
-    if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Faulty Tires") repairCost = 1;
-    if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Faulty Lights") repairCost = 2;
-    if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Faulty Dashboard") repairCost = 3;
-    if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Faulty Electrics") repairCost = 4;
-    if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Faulty Engine") repairCost = 5;
-    if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Unknown Faulty") repairCost = "To be determined on arrival";
-    if (temporaryFaults.options[temporaryFaults.selectedIndex].value === "Multiple Faults"){
+    if (cFaults === "No Faults, MOT") repairCost = 1;
+    if (cFaults === "Faulty Tires") repairCost = 1;
+    if (cFaults === "Faulty Lights") repairCost = 2;
+    if (cFaults === "Faulty Dashboard") repairCost = 3;
+    if (cFaults === "Faulty Electrics") repairCost = 4;
+    if (cFaults === "Faulty Engine") repairCost = 5;
+    if (cFaults === "Unknown Faulty") repairCost = "To be determined on arrival";
+    if (cFaults === "Multiple Faults"){
     }
 
     totalCost.textContent = "Total cost: " + repairCost + "£";
@@ -286,3 +286,6 @@ function RemoveFromGarageButton() {
     }
 }
 
+function TotalCostCalculator(){
+    
+}
